@@ -17,7 +17,11 @@ docker run -dit --name clickhouse-01 pycontribs/centos:7 sleep 6000000
 
 * Запустил playbook
 
-![playbook_ok]()
+![playbook_ok](https://github.com/A-Tagir/neto_ansible/blob/main/02/AnsiHomework2_1.png)
+
+один установочный дистрибутив недоступен, но сработал rescue - видимо так задумывалось.
 
 ## Задание 2
+
+
 
