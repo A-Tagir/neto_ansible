@@ -167,7 +167,7 @@ ansible-playbook site.yml -i inventory/prod.yml --dif
 
 * ссылка на фиксирующий commit
 
-[08-ansible-03-yandex](https://github.com/A-Tagir/neto_ansible/tree/2b7ad1ea3f44b547d3677dc3f7b6e64681b693a7/03)
+[08-ansible-03-yandex](https://github.com/A-Tagir/neto_ansible/tree/075bb98aa63e4afd8317b028d580e12d2ed919ee/03)
 
 
 
