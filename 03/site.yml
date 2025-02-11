@@ -63,14 +63,14 @@
 - name: Get lighthouse
   hosts: lighthouse-01
   tasks:
-   - name: Create_lh_dir
-     become: true
-     ansible.builtin.file:
-       path: /var/www/html
-       state: directory
-       owner: nginx
-       group: nginx
-       mode: '0755'
+    - name: Create_lh_dir
+      become: true
+      ansible.builtin.file:
+        path: /var/www/html
+        state: directory
+        owner: nginx
+        group: nginx
+        mode: '0755'
 - name: Install nginx
   hosts: lighthouse-01
   tasks:
@@ -89,15 +89,15 @@
     - name: Install nginx
       become: true
       yum:
-        name=nginx
-        state=latest
+        name: nginx
+        state: present
       notify:
         - start-nginx
     - name: Install git
       become: true
       yum:
         name: git
-        state: latest
+        state: present
     - name: Copy_lh
       become: true
       ansible.builtin.git:
@@ -107,11 +107,12 @@
     - name: Clean conf.d
       become: true
       file:
-       path: /etc/nginx/conf.d/default.conf
-       state: absent
+        path: /etc/nginx/conf.d/default.conf
+        state: absent
     - name: Add rights
       become: true
-      ansible.builtin.shell: "setenforce Permissive"
+      ansible.builtin.command: "setenforce Permissive"
+      changed_when: true
     - name: Deploy nginx configuration
       become: true
       ansible.builtin.template:
