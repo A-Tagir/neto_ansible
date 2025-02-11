@@ -112,7 +112,7 @@
     - name: Add rights
       become: true
       ansible.builtin.command: "setenforce Permissive"
-      changed_when: true
+      changed_when: false
     - name: Deploy nginx configuration
       become: true
       ansible.builtin.template:
