@@ -8,11 +8,11 @@
   hosts: vector-01
   roles:
     - vector
-- name: Get lighthouse
-  hosts: lighthouse-01
-  roles:
-    - lighthouse
 - name: Install nginx
   hosts: lighthouse-01
   roles:
     - nginx
+- name: Get lighthouse
+  hosts: lighthouse-01
+  roles:
+    - lighthouse
