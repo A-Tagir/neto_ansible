@@ -10,15 +10,8 @@
     - vector
 - name: Get lighthouse
   hosts: lighthouse-01
-  tasks:
-    - name: Create_lh_dir
-      become: true
-      ansible.builtin.file:
-        path: /var/www/html
-        state: directory
-        owner: nginx
-        group: nginx
-        mode: '0755'
+  roles:
+    - lighthouse
 - name: Install nginx
   hosts: lighthouse-01
   tasks:
@@ -46,12 +39,6 @@
       yum:
         name: git
         state: present
-    - name: Copy_lh
-      become: true
-      ansible.builtin.git:
-        repo: 'https://github.com/VKCOM/lighthouse.git'
-        version: master
-        dest: "{{ lh_dir }}"
     - name: Clean conf.d
       become: true
       file:
