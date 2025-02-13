@@ -53,4 +53,6 @@ CRITICAL Failed to validate /home/tiger/neto_ansible/05/roles/clickhouse/molecul
 
 * В каталоге roles/vector создаем сценарий тестирования
 
-![]()
+![init_ok](https://github.com/A-Tagir/neto_ansible/blob/main/05/AnsiHomework5_molecule_init.png)
+
+
