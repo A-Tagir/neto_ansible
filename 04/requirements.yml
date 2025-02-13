@@ -3,3 +3,18 @@
     scm: git
     version: "1.13"
     name: clickhouse
+
+  - src: git@github.com:A-Tagir/lighthouse-role.git
+    scm: git
+    version: "v1.1.1"
+    name: lighthouse
+
+  - src: git@github.com:A-Tagir/nginx-role.git
+    scm: git
+    version: "v1.1.1"
+    name: nginx
+
+  - src: git@github.com:A-Tagir/vector-role.git
+    scm: git
+    version: "v1.1.1"
+    name: vector
