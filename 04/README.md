@@ -57,9 +57,74 @@ ansible-galaxy install -r requirements.yml
 
 * Проверяем линтером role lighthouse 
 
+[role lighthouse](https://github.com/A-Tagir/lighthouse-role)
+
 ansible-lint site.yml
 
-![ansible-lint]()
+![ansible-lint](https://github.com/A-Tagir/neto_ansible/blob/main/04/AnsiHomework4_lh_linter.png)
+
+* Исправляем ошибки
+
+* Переносим установку nginx в role
+
+[role nginx](https://github.com/A-Tagir/nginx-role)
+  
+* Проверяем линтером role nginx
+
+## Задание 8
+
+* Выкладываю роли в репозиторий с тегом версии v1.1.1
+* добавляю в requirements и устанавливаю:
+```
+tiger@VM1:~/neto_ansible/04$ ansible-galaxy install -r requirements.yml
+Starting galaxy role install process
+- clickhouse (1.13) is already installed, skipping.
+- lighthouse (v1.1.1) is already installed, skipping.
+- extracting nginx to /home/tiger/neto_ansible/04/roles/nginx
+- nginx (v1.1.1) was installed successfully
+- extracting vector to /home/tiger/neto_ansible/04/roles/vector
+- vector (v1.1.1) was installed successfully
+```
+
+## Задание 9 
+
+* Дорабатываю playbook для использования roles
+
+[site.yaml](https://github.com/A-Tagir/neto_ansible/blob/main/04/site.yml)
+
+## Задание 10
+
+* выкладываю в репозиторий playbook
+
+[playbook](https://github.com/A-Tagir/neto_ansible/tree/main/04)
+
+## Задание 11
+
+* ссылки на role и playbook
+
+[nginx-role](https://github.com/A-Tagir/nginx-role)
+
+[vector-role](https://github.com/A-Tagir/vector-role)
+
+[lighthouse-role](https://github.com/A-Tagir/lighthouse-role)
+
+[playbook](https://github.com/A-Tagir/neto_ansible/tree/main/04)
+
+## Данный playbook повторяет действия их задания к "Использование Ансибл"
+## Но делает это с использование roles
+
+* запускаем playbook
+
+![playbook_error](https://github.com/A-Tagir/neto_ansible/blob/main/04/AnsiHomework4_play_error.png)
+
+* получили ошибку, поскольку нарушена последовательность тасков. исправляем.
+
+![play_ok](https://github.com/A-Tagir/neto_ansible/blob/main/04/AnsiHomework4_play_ok.png)
+
+* Теперь все выполнилось без ошибок
+
+
+
 
 
 
