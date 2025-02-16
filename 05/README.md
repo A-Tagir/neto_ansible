@@ -55,4 +55,31 @@ CRITICAL Failed to validate /home/tiger/neto_ansible/05/roles/clickhouse/molecul
 
 ![init_ok](https://github.com/A-Tagir/neto_ansible/blob/main/05/AnsiHomework5_molecule_init.png)
 
+* Запускаем
+
+ molecule test
+
+![molecule test](https://github.com/A-Tagir/neto_ansible/blob/main/05/AnsiHomework5_molecule_test.png)
+
+```
+- become: true
+      command: id -u
+      register: id_output
+    - assert:
+        that: id_output.stdout == '0'
+```
+
+Добавили assert c проверкой sudo
+
+![assert sudo](https://github.com/A-Tagir/neto_ansible/blob/main/05/AnsiHomework5_molecule_asserts.png)
+
+## Задание Tox
+
+```
+docker run --privileged=True -v /home/tiger/neto_ansible/05/roles/vector:/opt/vector-role -w /opt/vector-role -it aragast/netology:latest /bin/bash
+```
+![tox](https://github.com/A-Tagir/neto_ansible/blob/main/05/AnsiHomework5_tox.png)
+
+
+
 
