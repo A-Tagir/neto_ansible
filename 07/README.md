@@ -45,11 +45,11 @@ sonar-scanner   -Dsonar.projectKey=Netology   -Dsonar.sources=.   -Dsonar.host.u
 ```
 ![sonar_exec](https://github.com/A-Tagir/neto_ansible/blob/main/07/CICD_sonar_scanner_exec.png)
 
-* Нашлась 1 ошибка и 1 Code smells
+* Нашлось 2 баги и 1 Code smells
 
 ![sonar_result](https://github.com/A-Tagir/neto_ansible/blob/main/07/CICD_sonar_scanner_result.png)
 
-* Исправляем  (=+ to +=,  убираю pass)  Запускаем повторно
+* Исправляем  (=+ to += и обе ошибки исчезают,  убираю pass и это решает Code smells)  Запускаем повторно
 
 ![sonar_no error](https://github.com/A-Tagir/neto_ansible/blob/main/07/CICD_sonar_scanner_no_errors.png)
 
