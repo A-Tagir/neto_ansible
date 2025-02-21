@@ -38,7 +38,7 @@ fatal: [sonar-01]: FAILED! => {"changed": false, "msg": "Failure talking to yum:
   
 ![sonar-scanner](https://github.com/A-Tagir/neto_ansible/blob/main/07/CICD_sonar_scanner_version.png)
 
-* Запускаю для файла fail.playbook
+* Запускаю для файла fail.py
 ```
 sonar-scanner   -Dsonar.projectKey=Netology   -Dsonar.sources=.   -Dsonar.host.url=http://158.160.45.27:9000   /
 -Dsonar.login=96af815b6991f8687fbcb23fd3ddf52a2ffdd80f -Dsonar.coverage.exclusions=fail.py
