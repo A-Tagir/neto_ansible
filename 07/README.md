@@ -2,56 +2,39 @@
 
 ## Подготовка
 
-* Устанавливаю jira
+* Создаю виртуальные машина sonar и nexus с помощью терраформ
 
-docker run -v jiraVolume:/var/atlassian/application-data/jira --name="jira" -d -p 8080:8080 atlassian/jira-software
+terraform apply
 
-* Запускаю базу данных для Jira
+![vm_create](https://github.com/A-Tagir/neto_ansible/blob/main/07/CICD_yacloud_setup.png)
 
-docker run --name neto-pg -p 5432:5432 -e POSTGRES_PASSWORD=qwer1234 -d postgre
+* Вставляем IP адреса машин в inventory и запускаем playbook
 
-* Заходим в jira и делаем настройки
+ansible-playbook site.yml -i ./inventory/cicd/hosts.yml
 
-http://172.20.140.227:8080
+ошибка 
 
+```
+TASK [Install PostgreSQL] ****************************************************************
+fatal: [sonar-01]: FAILED! => {"changed": false, "msg": "Failure talking to yum: Cannot fi            nd a valid baseurl for repo: base/7/x86_64"}
+```
 
-* Настраиваем базу данных
+* Правим файл CentOS-Base.repo и в playbook меняем версию PostgreSQL c 11 на 12
 
-![db_setup](https://github.com/A-Tagir/neto_ansible/blob/main/06/CICD_jira_setup1.png)
+* Запускаем playbook и все получилось
 
-* получаем временный сертификат на сайте и готово:
+![sonar&nexus_install](https://github.com/A-Tagir/neto_ansible/blob/main/07/CICD_sonar_nexus_install.png)
 
-![Jira_ok](https://github.com/A-Tagir/neto_ansible/blob/main/06/CICD_jira_setup2.png)
+* Заходим в интерфейсы и меняем пароли
 
-## Задание 1
+![sonar](https://github.com/A-Tagir/neto_ansible/blob/main/07/CICD_sonar_ok.png)
 
-* Создаем панель Kanban
+![nexus](https://github.com/A-Tagir/neto_ansible/blob/main/07/CICD_nexus_ok.png)
 
-* Создаем проект и workflow bug
+## Знакомство с SonarQube
 
-![workflow bug](https://github.com/A-Tagir/neto_ansible/blob/main/06/CICD_workflow_bug.png)
-
-* Создаем workflow для других задач
-
-![workflow others](https://github.com/A-Tagir/neto_ansible/blob/main/06/CICD_workflow_others.png)
-
-* В панели Kanban создаем нужные колонки и двигаем задачи согласно workflow
-
-![flow_ok](https://github.com/A-Tagir/neto_ansible/blob/main/06/CICD_workflow_ok.png)
-
-* Создаем задачи заново, поскольку их нужно было вести до Done, а я закрыл.
-
-* Создаем панель Scrum и создаем необходимые согласно логике колонки.
-
-* Создаем Sprint и ведем задачи в панели Scrum.
-
-![scrum_flow_ok](https://github.com/A-Tagir/neto_ansible/blob/main/06/CICD_workflow_scrum_ok.png)
-
-XML bug workflow:
-
-[bug_xml](https://github.com/A-Tagir/neto_ansible/blob/main/06/bug_workflow.xml)
+*
 
 
-XML others workflow
 
-[others_xml](https://github.com/A-Tagir/neto_ansible/blob/main/06/classic%20default%20workflow.xml)
+
