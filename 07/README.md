@@ -55,6 +55,15 @@ sonar-scanner   -Dsonar.projectKey=Netology   -Dsonar.sources=.   -Dsonar.host.u
 
 ## Знакомство с Nexus
 
+* Загружаем артефакт с заданными параметрами, загружаем второй с новой версией, выгружаем xml
+
+![uploaded](https://github.com/A-Tagir/neto_ansible/blob/main/07/CICD_nexus_uploaded.png)
+
+
+[maven-metadata](https://github.com/A-Tagir/neto_ansible/blob/main/07/maven-metadata.xml)
+
+## Знакомство с Maven
+
 * 
 
 
