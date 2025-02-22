@@ -64,7 +64,45 @@ sonar-scanner   -Dsonar.projectKey=Netology   -Dsonar.sources=.   -Dsonar.host.u
 
 ## Знакомство с Maven
 
-* 
+* Скачиваем дистрибутив
+
+wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+
+* Распаковываем 
+
+gunzip apache-maven-3.9.9-bin.tar.gunzip
+
+tar -xvf apache-maven-3.9.9-bin.tar
+
+* Добавляем PATH   export PATH=$(pwd):$PATH
+
+* устанавливаем java 
+
+sudo apt install openjdk-8-jdk
+
+* Проверяем
+
+![mvn_ok](https://github.com/A-Tagir/neto_ansible/blob/main/07/CICD_mvn_ok.png)
+
+* копирую pom.xml
+
+### Основная часть
+
+* Редактирую pom.xml
+
+[pom.xml](https://github.com/A-Tagir/neto_ansible/blob/main/07/mvn/pom.xml)
+
+* запускаю mvn package
+
+![mvn package ok](https://github.com/A-Tagir/neto_ansible/blob/main/07/CICD_mvn_package_ok.png)
+
+* проверяю директорию ~/.m2/repository/
+
+![m2/repository](https://github.com/A-Tagir/neto_ansible/blob/main/07/CICD_mvn_m2_repo.png)
+
+* pom.xml
+
+[pom.xml](https://github.com/A-Tagir/neto_ansible/blob/main/07/mvn/pom.xml)
 
 
 
