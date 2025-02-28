@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                script {
+                    sh 'cd /opt/jenkins_agent/workspace/freestyle_molecule/neto_ansible/05/roles/nginx'
+                    sh 'molecule init scenario --driver-name docker'
+                    sh 'molecule test'
+                }
+            }
+        }
+    }
+}
