@@ -78,7 +78,31 @@ terraform apply
 
 ## Задание 5
 
+* создаем Scripted Pipeline, наполняю его скриптом согласно заданию. С первого раза возникла ошибка "sudo: a password is required\n", "module_stdout"
+  в sudoers на агенте добавил jenkins nopassword
 
+* Запускаю
 
+![Scripted Pipeline SUCCESS](https://github.com/A-Tagir/neto_ansible/blob/main/08/CICD_jenkins_scripted_job_success.png)
+
+## Задание 6
+
+* Вношу необходимые изменения согласно заданию в pipline 
+
+[ScriptedJenkinsfile](https://github.com/A-Tagir/neto_ansible/blob/main/08/ScriptedJenkinsfile)
+
+## Задание 7
+
+* Проверяю
+
+![ScriptedJenkinsfile run](https://github.com/A-Tagir/neto_ansible/blob/main/08/CICD_jenkins_scripted_job_prod_run_true.png)
+
+## Задание 8
+
+[ScriptedJenkinsfile](https://github.com/A-Tagir/neto_ansible/blob/main/08/ScriptedJenkinsfile)
+
+[Jenkinsfile](https://github.com/A-Tagir/neto_ansible/blob/main/08/Jenkinsfile)
+
+[role](https://github.com/A-Tagir/neto_ansible/tree/main/05/roles/vector)
 
 
