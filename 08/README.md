@@ -68,7 +68,17 @@ terraform apply
 
 ## Задание 4
 
-* 
+* Создаю Multibranch Pipeline на запуск Jenkinsfile из репозитория
+
+![Multibranch Pipeline](https://github.com/A-Tagir/neto_ansible/blob/main/08/CICD_jenkins_multibranch_pipeline_job.png)
+
+* Запускаю
+
+![Multibranch Pipeline success](https://github.com/A-Tagir/neto_ansible/blob/main/08/CICD_jenkins_multibranch_pipeline_job_ok.png)
+
+## Задание 5
+
+
 
 
 
