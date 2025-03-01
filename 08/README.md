@@ -46,7 +46,29 @@ terraform apply
 
 ## Задание 2
 
+* Делаю Declarative Pipeline Job, который будет запускать molecule test для роли vector
 
+![Declarative Pipeline Job](https://github.com/A-Tagir/neto_ansible/blob/main/08/CICD_jenkins_pipeline_job.png)
+
+* Запускаю
+
+![Pipeline Job ok](https://github.com/A-Tagir/neto_ansible/blob/main/08/CICD_jenkins_pipeline_job_ok.png)
+
+## Задание 3
+
+* Переношу в github
+
+[Jenkinsfile](https://github.com/A-Tagir/neto_ansible/blob/main/08/Jenkinsfile)
+
+![git job](https://github.com/A-Tagir/neto_ansible/blob/main/08/CICD_jenkins_pipeline_job_togit.png)
+
+* Запускаю
+
+![git job ok](https://github.com/A-Tagir/neto_ansible/blob/main/08/CICD_jenkins_pipeline_job_togit_ok.png)
+
+## Задание 4
+
+* 
 
 
 
