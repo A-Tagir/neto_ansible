@@ -69,4 +69,79 @@
 
 ## Задание 8
 
+* Мигрирую build configuration в репозиторий. Для этого создаю репозиторий, делаю pull на рабочую машину
+
+[teamcity branch master](https://github.com/A-Tagir/example-teamcity/tree/master)
+
+* Создаю token для доступа к репозиторию, и добавляю данные в Teamcity
+
+![migrate](https://github.com/A-Tagir/neto_ansible/blob/main/09/CICD_Teamcity_migrate_to_github.png)
+
+## Задание 9
+
+* Создаю новую ветку feature/add_reply
+
+[branch feature/add_reply](https://github.com/A-Tagir/example-teamcity/tree/feature/add_reply)
+
+## Задание 10
+
+* Написал новый метод для класса Welcomer: метод возвращает реплику "Hello good hunter"
+
+[Welcomer.java](https://github.com/A-Tagir/example-teamcity/blob/feature/add_reply/src/main/java/plaindoll/Welcomer.java)
+
+## Задание 11
+
+* Дополнил тест для нового метода на поиск слова hunter в новой реплике
+
+[WelcomerTest.java](https://github.com/A-Tagir/example-teamcity/blob/feature/add_reply/src/test/java/plaindoll/WelcomerTest.java)
+
+## Задание 12
+
+* Сделал push ветки feature/add_reply
+
+![push](https://github.com/A-Tagir/neto_ansible/blob/main/09/CICD_Teamcity_push_to_feature.png)
+
+## Задание 13
+
+* Сборка автоматически запустилась и прошла успешно 
+
+![test pass](https://github.com/A-Tagir/neto_ansible/blob/main/09/CICD_Teamcity_build_welcomer_ok.png)
+
+## Задание 14
+
+* Вношу изменения из ветки feature/add_reply в master
+
+![merge](https://github.com/A-Tagir/neto_ansible/blob/main/09/CICD_Teamcity_merge.png)
+
+## Задание 15
+
+* Проверяем, что ветка мастер без build_passed
+
+[no builds](https://github.com/A-Tagir/neto_ansible/blob/main/09/CICD_Teamcity_master_no_builds.png)
+
+## Задание 16
+
+* Настраиваю, чтобы артефакты собирались в jar. Для этого нужно нажать кнопку браузинга в интерфейсе Teamcity в разделе Build - General settings
+  и выбрать нужные файлы
+![artifacte_to_jar](https://github.com/A-Tagir/neto_ansible/blob/main/09/CICD_Teamcity_artifacts_to_jar.png)
+
+## Задание 17
+
+* Проверяю сборку, артефакты появились.
+
+![artifacts are present](https://github.com/A-Tagir/neto_ansible/blob/main/09/CICD_Teamcity_artifacts.png)
+
+## Задание 18
+
+* Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity
+
+В начале задания не было указано, что настройки нужно хранить в репозитории. Надеюсь это не сильно важно и не 
+повлияет на результат проверки. 
+
+[example-teamcity](https://github.com/A-Tagir/example-teamcity)
+
+
+[homework repo](https://github.com/A-Tagir/neto_ansible/tree/main/09)
+
+
 
