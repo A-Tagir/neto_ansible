@@ -117,7 +117,7 @@
 
 * Проверяем, что ветка мастер без build_passed
 
-[no builds](https://github.com/A-Tagir/neto_ansible/blob/main/09/CICD_Teamcity_master_no_builds.png)
+![no builds](https://github.com/A-Tagir/neto_ansible/blob/main/09/CICD_Teamcity_master_no_builds.png)
 
 ## Задание 16
 
