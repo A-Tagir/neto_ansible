@@ -5,3 +5,6 @@ spec:
       privileged: false
     stdin: false
     tty: false
+    env:
+    - name: SERVER_URL
+      value: http://89.169.138.226:8111
