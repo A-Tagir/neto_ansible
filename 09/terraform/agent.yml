@@ -7,4 +7,4 @@ spec:
     tty: false
     env:
     - name: SERVER_URL
-      value: http://89.169.138.226:8111
+      value: http://89.169.128.187:8111

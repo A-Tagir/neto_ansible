@@ -134,14 +134,23 @@
 ## Задание 18
 
 * Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity
+Смотрим настройки:
 
-В начале задания не было указано, что настройки нужно хранить в репозитории. Надеюсь это не сильно важно и не 
-повлияет на результат проверки. 
+![VersionToGit](https://github.com/A-Tagir/neto_ansible/blob/main/09/CICD_Teamcity_SettingToGit.png) 
+
+* Проверяем репозиторий, конфигурация появилась
+
+![ConfigCommit](https://github.com/A-Tagir/neto_ansible/blob/main/09/CICD_Teamcity_SettingToGit_commit.png)
+
+* Project config
+
+[ProjectConfig](https://github.com/A-Tagir/example-teamcity/tree/master/.teamcity/ExampleTeamcity)
+
+## Задание 19
+
+Ссылка на репозиторий
 
 [example-teamcity](https://github.com/A-Tagir/example-teamcity)
 
 
 [homework repo](https://github.com/A-Tagir/neto_ansible/tree/main/09)
-
-
-
